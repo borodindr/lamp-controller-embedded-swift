@@ -1,0 +1,1 @@
+cp build/blinker.uf2 /Volumes/RP2350
