@@ -12,7 +12,13 @@ pico_sdk_init()
 enable_language(Swift)
 
 
-add_executable(blinker Main.swift)
+add_executable(blinker 
+    Sources/Main.swift 
+    Sources/Duration.swift
+    Sources/Time.swift
+    Sources/LED.swift 
+    Sources/UltrasonicSensor.swift 
+)
 target_include_directories(blinker PRIVATE ${CMAKE_CURRENT_LIST_DIR}/include)
 set_target_properties(blinker PROPERTIES LINKER_LANGUAGE CXX)
 
@@ -88,6 +94,7 @@ target_compile_options(blinker PUBLIC "$<$<COMPILE_LANGUAGE:Swift>:SHELL:
         -Xcc -mthumb
         -Xcc -mfloat-abi=softfp
         -Xcc -mfpu=fpv5-sp-d16
+        -parse-as-library
 
         -Xcc -fshort-enums
         -Xfrontend -function-sections
