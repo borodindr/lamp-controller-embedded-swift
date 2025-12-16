@@ -1,22 +1,14 @@
 // LED pin
 // Blue LED on Pico W is GPIO 16
-let LED_PIN: UInt32 = 16
+let LED_PIN: UInt32 = 15
 
 // HC-SR04 pins
 // Output to TRIG
-let TRIG_PIN: UInt32 = 6
+let TRIG_PIN: UInt32 = 16 // > 16
 // Input from ECHO
-let ECHO_PIN: UInt32 = 7
+let ECHO_PIN: UInt32 = 17 // > 17
 
 let refreshIntervalMS: UInt = 1000 * 2 // 2 seconds. Increase after testing
-
-
-
-
-
-
-
-
 
 @main
 struct Application {
